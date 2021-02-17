@@ -1,13 +1,65 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #353535;
+  padding: 1.3rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, 350px);
+  gap: 0.7rem;
+  align-items: flex-start;
+}
+
+.container .board {
+  background-color: #d9d9d9;
+  /* padding: 20px; */
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.container .board .board-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 2.2rem;
+  background-color: #284b63;
+  padding: 0.5rem;
+}
+
+.container .board .board-body {
+  padding: 0.7rem;
+  background-color: #d9d9d9;
+}
+
+.container .board .board-body .card {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+}
+
+.container .board .board-body .card:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+.container .board .board-header .board-title {
+  width: auto;
+  flex: 1;
+}
+.container .board .board-header .board-title,
+.board-icon {
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.container .board .board-header .board-icon {
+  cursor: pointer;
 }
