@@ -5,9 +5,7 @@ import Card from "./components/Card";
 
 
 function App() {
-
   const { boards } = useSelector(state => state)
-
   return (
     <div className="container">
       {boards.map(({ title, items }, boardIndex) => (
